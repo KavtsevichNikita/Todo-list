@@ -50,7 +50,9 @@ export default class App extends Component {
         // generate id
         const newItem = this.createTodoItem(text)
         // add element in array?
-
+        if(text === '') {
+            return null;
+        }
         this.setState(( {todoData} ) => {
             const newArr = [
                 ...todoData,
